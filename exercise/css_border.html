@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS練習</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            padding: 20px;
+        }
+
+        .box {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            width: fit-content;
+            min-width: 400px;
+        }
+
+        /* 第一個 */
+        .double-border {
+            background-color: lightblue;
+            border: 6px double tomato;
+        }
+
+        /* 第二個 */
+        .solid-rounded {
+            background-color: yellow;
+            border: 2px solid dodgerblue;
+            border-radius: 15px;
+        }
+
+        /* 第三個 */
+        .dotted-border {
+            background-color: mediumseagreen;
+            border: 8px dotted gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box double-border">Hello World</div>
+
+    <div class="box solid-rounded">Hello World</div>
+
+    <div class="box dotted-border">Hello World</div>
+
+</body>
+
+</html>
