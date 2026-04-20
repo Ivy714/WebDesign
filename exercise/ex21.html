@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Float & Overflow Exercise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .top-section {
+            margin-bottom: 50px;
+        }
+
+        .float-left-box {
+            float: left;
+            width: 45%;
+            background-color: yellow;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .float-right-box {
+            float: right;
+            width: 45%;
+            border: 2px solid red;
+            padding: 10px;
+        }
+
+        .clearfix-container {
+            clear: both;
+            /* 確保不被上方的浮動影響 */
+            padding-top: 30px;
+        }
+
+        .blue-box {
+            background-color: #add8e6;
+            border: 2px solid #0000ff;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        .floating-img {
+            float: right;
+            width: 100px;
+            margin-left: 15px;
+        }
+
+        .note {
+            margin-top: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-section">
+        <div class="float-left-box">
+            In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap
+            around the image.
+        </div>
+        <div class="float-right-box">
+            Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
+        </div>
+    </div>
+
+    <div class="clearfix-container">
+        <div class="blue-box">
+            <img src="https://via.placeholder.com/100" alt="Logo" class="floating-img">
+            This image is floating to the right in this paragraph. The paragraph has a light blue background-color and a
+            border. The text in the paragraph will wrap around the image.
+        </div>
+
+        <p class="note">
+            Note: If the image is taller than the element containing it, and it is floated, it will overflow outside of
+            its container. We use overflow: auto; to fix this.
+        </p>
+    </div>
+
+</body>
+
+</html>
