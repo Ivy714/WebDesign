@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Task</title>
+    <style>
+        /* General Page Styling */
+        body {
+            background-color: #eeeeee;
+            
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* The white container card */
+        .page-container {
+            background-color: white;
+            padding: 30px;
+            width: 90%;
+            max-width: 800px;
+            min-height: 250px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Table Styling */
+        table {
+            border-collapse: collapse;
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Header Styling */
+        th {
+            background-color: #666666;
+            /* Dark grey header */
+            color: white;
+        }
+
+        /* Alternating Background Colors */
+        tbody tr:nth-child(1),
+        tbody tr:nth-child(3) {
+            background-color: #ffff00;
+            /* Yellow for rows 1 and 3 */
+        }
+
+        tbody tr:nth-child(2) {
+            background-color: #ffffff;
+            /* White for row 2 */
+        }
+
+        /* Fixed Div Styling */
+        .fixed-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 180px;
+            height: 120px;
+            border: 3px solid #76b041;
+            /* Green border */
+            padding: 10px;
+            background-color: white;
+            font-size: 1.1em;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="fixed-box">
+        This div element has position: fixed;
+    </div>
+
+</body>
+
+</html>
