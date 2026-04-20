@@ -1,83 +1,64 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Float & Overflow Exercise</title>
+    <title>CSS Layout Recreation</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        .container {
+            width: 700px;
+            margin: 50px auto;
             padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: serif;
             line-height: 1.6;
+            color: #333;
         }
 
-        .top-section {
-            margin-bottom: 50px;
-        }
-
-        .float-left-box {
-            float: left;
-            width: 45%;
-            background-color: yellow;
-            border: 1px solid black;
-            padding: 10px;
-        }
-
-        .float-right-box {
+        .sidebar {
             float: right;
-            width: 45%;
-            border: 2px solid red;
-            padding: 10px;
-        }
-
-        .clearfix-container {
-            clear: both;
-            /* 確保不被上方的浮動影響 */
-            padding-top: 30px;
-        }
-
-        .blue-box {
-            background-color: #add8e6;
-            border: 2px solid #0000ff;
-            padding: 10px;
-            overflow: auto;
-        }
-
-        .floating-img {
-            float: right;
-            width: 100px;
+            width: 150px;
+            height: 150px;
             margin-left: 15px;
+            padding: 10px;
+            border: 3px solid #76923c;
+            overflow-y: auto;
+            background-color: white;
+            font-family: sans-serif;
+            font-size: 1.1rem;
         }
 
-        .note {
-            margin-top: 15px;
-            font-style: italic;
+        /* The yellow highlighted blocks */
+        .highlight {
+            display: inline-block;
+            background-color: #ffff00;
+            border: 1px solid blue;
+            padding: 2px 5px;
+            margin: 0 2px;
+            line-height: 1.2;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="top-section">
-        <div class="float-left-box">
-            In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap
-            around the image.
-        </div>
-        <div class="float-right-box">
-            Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
-        </div>
-    </div>
-
-    <div class="clearfix-container">
-        <div class="blue-box">
-            <img src="https://via.placeholder.com/100" alt="Logo" class="floating-img">
-            This image is floating to the right in this paragraph. The paragraph has a light blue background-color and a
-            border. The text in the paragraph will wrap around the image.
+    <div class="container">
+        <div class="sidebar">
+            A float div with overflow auto. A float div with overflow auto. A float div with overflow auto.
         </div>
 
-        <p class="note">
-            Note: If the image is taller than the element containing it, and it is floated, it will overflow outside of
-            its container. We use overflow: auto; to fix this.
+        <p>
+            (Just long sentence.) Let me not to the marriage of true minds
+            Admit impediments. <span class="highlight">Love</span> is not love
+            Which alters when it alteration finds, Or bends with the remover to remove:
+            O, no! it is an ever-fix`ed mark, That looks on tempests and is never shaken;
+            It is the star to every wand'ring bark, Whose worth's unknown, although
+            his heighth be taken. <span class="highlight">Love's</span> not Time's fool,
+            though rosy lips and cheeks Within his bending sickle's compass come;
+            <span class="highlight">Love</span> alters not with his brief hours and weeks,
+            But bears it out even to the edge of doom: If this be error and upon me proved,
+            I never writ, nor no man ever loved.
         </p>
     </div>
 
