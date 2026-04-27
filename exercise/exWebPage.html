@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Layout Practice</title>
     <style>
-        /* 基本背景與容器設定 */
         body {
             background-color: #5bb2ff;
-            /* 藍色背景 */
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -24,7 +22,6 @@
             padding: 20px;
             width: 100%;
             max-width: 600px;
-            /* 限制最大寬度方便觀察 */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
@@ -41,11 +38,10 @@
             width: 100%;
         }
 
-        /* 中間青藍色區塊容器 */
+        /* 中間藍色區塊容器 */
         .middle-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            /* 預設三欄並排 (圖b) */
             gap: 10px;
             margin-bottom: 10px;
         }
@@ -59,7 +55,6 @@
         .footer-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            /* 預設四欄並排 (圖b) */
             gap: 10px;
         }
 
@@ -68,7 +63,6 @@
             height: 40px;
         }
 
-        /* --- 關鍵重點：當寬度小於 480px 時的變化 (圖a) --- */
         @media (max-width: 480px) {
             .middle-container {
                 grid-template-columns: 1fr;
