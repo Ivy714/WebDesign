@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Image Styling Practice</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+        }
+        /* 左 */
+        .img-left {
+            width: 33%;
+            height: 300px;
+            
+            border-radius: 18px;
+            object-fit: cover;
+            /* Prevents distortion */
+        }
+
+        /* 中 */
+        .img-middle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* Prevents distortion */
+            border: 2px solid #000;
+        }
+
+        /* 右 */
+        .img-right {
+            width: 33%;
+            height: 300px;
+            object-fit: fill;
+            /* Forces distortion to fill the container */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&q=80&w=600"
+            alt="Eiffel Tower" class="img-left">
+
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=400"
+            alt="Landscape" class="img-middle">
+
+        <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&q=80&w=600"
+            alt="Eiffel Tower Distorted" class="img-right">
+    </div>
+
+</body>
+
+</html>
