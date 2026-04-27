@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>工程師與設計師協作 - 內部捲動版</title>
+    <title>specified button</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <style>
-        /* 頁面背景 */
         body {
             font-family: 'Roboto', "Microsoft JhengHei", sans-serif;
             background-color: #d1d1d1;
@@ -18,20 +17,19 @@
             margin: 0;
         }
 
-        /* 1. 主容器：定義這個元件的大小，並在這裡產生捲軸 */
+        
         .viewport-container {
             width: 500px;
             height: 450px;
-            /* 設定固定高度，內容超過此高度會出現內部捲軸 */
+            
             background-color: #fff;
             border: 1px solid #bbb;
             overflow-y: scroll;
-            /* 強制產生內部捲軸 */
+            
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             position: relative;
         }
 
-        /* 2. 頂部控制列：左側"預覽"，右側"按鈕" */
         .top-header {
             display: flex;
             justify-content: space-between;
@@ -39,8 +37,6 @@
             padding: 10px 20px;
             background-color: #f6f6f6;
             border-bottom: 1px solid #eaeaea;
-            /* 如果你希望 Header 固定在頂部不跟著捲，可以改 sticky，
-               但你要求圖片也要跟著捲，所以這裡保持預設流動 */
         }
 
         .preview-label {
@@ -49,7 +45,7 @@
             font-weight: bold;
         }
 
-        /* 按鈕規格 (h22/R8) */
+        /* 按鈕 */
         .info-btn {
             height: 22px;
             border-radius: 8px;
@@ -66,7 +62,7 @@
             background-color: #eee;
         }
 
-        /* 3. 內容區域 */
+        /* 內容 */
         .content-body {
             padding: 15px;
             display: flex;
@@ -88,7 +84,7 @@
             object-fit: cover;
         }
 
-        /* 4. 綠色資訊條 (預設隱藏) */
+        /* 綠色資訊條 */
         .details-area {
             display: none;
             /* 點擊後開啟 */
@@ -109,7 +105,6 @@
             box-sizing: border-box;
         }
 
-        /* 自定義內部捲軸樣式 (模擬設計稿) */
         .viewport-container::-webkit-scrollbar {
             width: 8px;
         }
