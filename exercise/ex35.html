@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Object Property Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+        }
+
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Object Manipulation Demo</h1>
+
+        <h2>1. Original Object Properties</h2>
+        <p>Listing all properties (keys) found in the object:</p>
+        <ul id="properties-list"></ul>
+
+        <h2>2. Object After Deleting 'age' Property</h2>
+        <p>The updated object printed to the page:</p>
+        <pre id="output-object"></pre>
+    </div>
+
+    <script>
+        var Person = {
+            firstName: "Tony",
+            lastName: "Lee",
+            age: 50,
+            eyeColor: "Blue"
+        };
+
+        var properties = Object.keys(Person);
+        var listContainer = document.getElementById("properties-list");
+
+        properties.forEach(function (property) {
+            var li = document.createElement("li");
+            li.textContent = property;
+            listContainer.appendChild(li);
+        });
+
+        delete Person.age;
+
+        var outputContainer = document.getElementById("output-object");
+        outputContainer.textContent = JSON.stringify(Person, null, 4);
+    </script>
+
+</body>
+
+</html>
